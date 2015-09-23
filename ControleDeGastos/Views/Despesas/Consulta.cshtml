@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ControleDeGastos.Models.Despesas>
+@{
+    ViewBag.Title = "Consulta";
+}
+
+<h2>Consulta</h2>
+<a class="btn btn-success" href="~/Despesas/Create">Adicionar Novo Gasto</a>
+<a class="btn btn-success" href="~/Gastos/Create">Adicionar Novo Tipo de Gasto</a>
+<table class="table table-responsive table-hover">
+    <tr>
+        <td>Local</td>
+        <td>Data</td>
+        <td>Valor</td>
+        <td>Tipo</td>
+        <td></td>
+        <td></td>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Local</td>
+            <td>@item.Data</td>
+            <td>@item.Valor</td>
+            <td>@item.Tipo</td>
+            <td><a class="btn btn-warning" href="~/Despesas/Update/@item.Id">Alterar</a></td>
+            <td><a class="btn btn-danger" href="~/Despesas/DeleteDespesa/?pId=@item.Id">Deletar</a></td>
+        </tr>
+    }
+
+</table>

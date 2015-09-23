@@ -1,0 +1,35 @@
+﻿@model ControleDeGastos.Models.Despesas
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+<div class="form-group">
+    <form action="~/Despesas/Update/@Model.Id" method="post">
+        <div class="form-group">
+            <label>Data</label>
+            <input class="form-control" type="date" name="Data" value="@Model.Data"/>
+        </div>
+        <div class="form-group">
+            <label>Local</label>
+            <input class="form-control" type="text" name="Local" value="@Model.Local" />
+        </div>
+        <div class="form-group">
+            <label>Valor</label>
+            <input class="form-control" type="text" name="Valor" value="@Model.Valor" />
+        </div>
+        <div class="form-group">
+            <label>Tipo</label>
+            <select class="form-control" id="SelectedUserRoleId" name="Tipo">
+                @foreach (var item in @ViewBag.sGastos)
+                {
+
+                    <option value="@item.IdTipo">@item.Nome</option>
+
+                }
+            </select>
+        </div>
+        <button type="submit" class="btn btn-success">Confirmar</button>
+    </form>
+</div>
