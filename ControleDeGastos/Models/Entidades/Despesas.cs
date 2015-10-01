@@ -8,21 +8,27 @@ namespace ControleDeGastos.Models
     public class Despesas
     {
         public int Id { get; set; }
-        public string Data { get; set; }
-        public float Valor { get; set; }
-        public int Tipo { get; set; }
+
+        public DateTime Data { get; set; }
+
+
+        public decimal Valor { get; set; }
+
         public string Local { get; set; }
+
+        //public int Tipo { get; set; }
+        public Gastos gastos { get; set; }
 
         public Despesas()
         {
 
         }
-        public Despesas(int pId, string pData, float pValor, int pTipo, string pLocal)
+        public Despesas(int pId, DateTime pData, decimal pValor, Gastos pgastos, string pLocal)
         {
             Id = pId;
-            Data = pData.Replace(" 00:00:00","");
+            Data = pData.Date;
             Valor = pValor;
-            Tipo = pTipo;
+            gastos = pgastos;
             Local = pLocal;
         }
     }

@@ -18,7 +18,7 @@ namespace ControleDeGastos.Controllers
             return View(despesas);
         }
         [HttpPost]
-        public ActionResult Consulta(string cData)
+        public ActionResult Consulta(DateTime cData)
         {
             var despesas = despesasrepositorio.Consulta(cData);
             return View(despesas);
@@ -49,9 +49,9 @@ namespace ControleDeGastos.Controllers
             return RedirectToAction("Despesas");
         }
         [HttpGet]
-        public ActionResult DeleteDespesa(int pId)//ERRO AQUI
+        public ActionResult DeleteDespesa(int id)
         {
-            despesasrepositorio.Delete(pId);
+            despesasrepositorio.Delete(id);
             return RedirectToAction("Despesas");
         }
     }

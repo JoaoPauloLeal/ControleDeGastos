@@ -1,10 +1,20 @@
 ﻿@model IEnumerable<ControleDeGastos.Models.Gastos>
 @{
     ViewBag.Title = "Gastos";
+    var del = ViewBag.erro;
 }
 
 <h2>Gastos</h2>
 <a class="btn btn-success" href="~/Gastos/Create">Adicionar Novo Tipo de Gasto</a>
+    @if (del==1)
+    {
+    <div class="alert alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>Tipo de Gasto não pode ser deletado</strong>
+    </div>
+    } 
 <table class="table table-responsive table-hover">
     <tr>
         <td>Nome do Gasto</td>
@@ -15,8 +25,8 @@
     {
         <tr>
             <td>@item.Nome</td>
-            <td><a class="btn btn-warning" href="~/Gastos/Update/?pId=@item.IdTipo">Alterar</a></td>
-            <td><a class="btn btn-danger" href="~/Gastos/Delete/?pId=@item.IdTipo">Deletar</a></td>
+            <td><a class="btn btn-warning" href="~/Gastos/Update/@item.IdTipo">Alterar</a></td>
+            <td><a class="btn btn-danger" href="~/Gastos/Delete/@item.IdTipo">Deletar</a></td>
         </tr>
     }
 

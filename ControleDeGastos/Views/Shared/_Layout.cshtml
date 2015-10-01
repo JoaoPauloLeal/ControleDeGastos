@@ -21,7 +21,7 @@
                 @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div style="text-align:right">
-                <form class="navbar-right" method="post">
+                <form class="navbar-right" action="~/Despesas/Consulta" method="post">
                     <input class="form-control" type="date" name="cData" />
                     <button type="submit" class="btn btn-info"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                 </form>

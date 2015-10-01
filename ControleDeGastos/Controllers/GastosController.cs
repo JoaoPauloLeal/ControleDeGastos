@@ -26,15 +26,17 @@ namespace ControleDeGastos.Controllers
             gastosrepositorio.Create(gastos);
             return RedirectToAction("Gastos");
         }
-        public ActionResult Delete(int pId)
+        public ActionResult Delete(int id)
         {
-            gastosrepositorio.Delete(pId);
+            int del;
+            del = gastosrepositorio.Delete(id);
+            ViewBag.erro = del;
             return RedirectToAction("Gastos");
         }
         [HttpGet]
-        public ActionResult Update(int pId)
+        public ActionResult Update(int id)
         {
-            Gastos gastos = gastosrepositorio.GetOne(pId);
+            Gastos gastos = gastosrepositorio.GetOne(id);
             return View(gastos);
         }
         [HttpPost]
