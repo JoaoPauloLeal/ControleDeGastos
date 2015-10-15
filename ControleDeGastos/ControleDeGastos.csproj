@@ -134,6 +134,8 @@
     <Content Include="Views\Despesas\Update.cshtml" />
     <Content Include="Views\Gastos\Update.cshtml" />
     <Content Include="Views\Despesas\Consulta.cshtml" />
+    <Content Include="Views\Despesas\CreateV.cshtml" />
+    <Content Include="Views\Gastos\CreateV.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

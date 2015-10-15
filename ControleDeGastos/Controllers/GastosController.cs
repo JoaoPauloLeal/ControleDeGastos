@@ -23,8 +23,12 @@ namespace ControleDeGastos.Controllers
         [HttpPost]
         public ActionResult Create(Gastos gastos)
         {
-            gastosrepositorio.Create(gastos);
-            return RedirectToAction("Gastos");
+            if (ModelState.IsValid)
+            {
+                gastosrepositorio.Create(gastos);
+                return RedirectToAction("Gastos");
+            }
+            return View();
         }
         public ActionResult Delete(int id)
         {

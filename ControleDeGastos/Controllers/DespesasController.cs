@@ -32,8 +32,15 @@ namespace ControleDeGastos.Controllers
         [HttpPost]
         public ActionResult Create(Despesas pDespesas)
         {
-            despesasrepositorio.Create(pDespesas);
-            return RedirectToAction("Despesas");
+            List<Gastos> sGastos = new List<Gastos>(gastosrepositorio.getAll());
+            ViewBag.sGastos = sGastos;
+
+            if (ModelState.IsValid)
+            {
+                despesasrepositorio.Create(pDespesas);
+                return RedirectToAction("Despesas");
+            }
+            return View();
         }
         public ActionResult Update(int id)
         {

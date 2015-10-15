@@ -1,14 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ControleDeGastos.Models
 {
     public class Gastos
     {
         public int IdTipo { get; set; }
+
+        [Required(ErrorMessage = "O campo nome é obrigadório")]
         public string Nome { get; set; }
+
         public Gastos()
         {
 
