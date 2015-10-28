@@ -1,13 +1,14 @@
-﻿using ControleDeGastos.Models;
+﻿using ControleDeGastos.Core;
+using ControleDeGastos.Repository.Contracts;
 using MySql.Data.MySqlClient;
 using PexeiraConnectionClassLibrary;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ControleDeGastos.Models
+namespace ControleDeGastos.Repository.Repositories
 {
-    public class GastosRepositorio : IRepositorioGenerico
+    public class GastosRepositorio : ITipoRepositorio
     {
         RepositorioDB conn = new RepositorioDB();
         private List<Gastos> gastos = new List<Gastos>();
@@ -67,7 +68,7 @@ namespace ControleDeGastos.Models
             return erro;
 
         }
-        public Gastos GetOne(int pId)
+        public Gastos getOne(int pId)
         {
             MySqlCommand cmm = new MySqlCommand();
             StringBuilder sql = new StringBuilder();

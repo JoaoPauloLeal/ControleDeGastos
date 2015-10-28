@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeGastos", "Control
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PexeiraConnectionClassLibrary", "..\PexeiraConnectionDespesas\PexeiraConnectionClassLibrary\PexeiraConnectionClassLibrary.csproj", "{8F5CFBB8-BE6C-4E46-8145-92D6691FEDF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeGastos.Core", "ControleDeGastos.Core\ControleDeGastos.Core.csproj", "{BDC2E2D3-EBF5-491F-AE66-39C932A76138}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControleDeGastos.Repository", "ControleDeGastos.Repository\ControleDeGastos.Repository.csproj", "{577FF3EA-BBB1-4DF6-A71D-097EAB9CEA44}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{8F5CFBB8-BE6C-4E46-8145-92D6691FEDF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F5CFBB8-BE6C-4E46-8145-92D6691FEDF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F5CFBB8-BE6C-4E46-8145-92D6691FEDF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDC2E2D3-EBF5-491F-AE66-39C932A76138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC2E2D3-EBF5-491F-AE66-39C932A76138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC2E2D3-EBF5-491F-AE66-39C932A76138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC2E2D3-EBF5-491F-AE66-39C932A76138}.Release|Any CPU.Build.0 = Release|Any CPU
+		{577FF3EA-BBB1-4DF6-A71D-097EAB9CEA44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{577FF3EA-BBB1-4DF6-A71D-097EAB9CEA44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{577FF3EA-BBB1-4DF6-A71D-097EAB9CEA44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{577FF3EA-BBB1-4DF6-A71D-097EAB9CEA44}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
